@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -10,7 +9,8 @@ import {
   CalendarDays,
   ChefHat,
   Calendar,
-  Apple
+  Apple,
+  ScanLine
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
@@ -160,7 +160,7 @@ const Dashboard: React.FC = () => {
           <Card className="card-hover">
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
               <div className="h-12 w-12 bg-nutri-green/10 rounded-full flex items-center justify-center mb-3">
-                <Scan className="h-6 w-6 text-nutri-green" />
+                <ScanLine className="h-6 w-6 text-nutri-green" />
               </div>
               <h3 className="text-sm font-medium">Scan Label</h3>
             </CardContent>

@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChefHat, RefrigeratorIcon, SwapHorizontal } from 'lucide-react';
+import { ChefHat, ArrowRightLeft } from 'lucide-react';
 
 const FoodSuggestions: React.FC = () => {
   // Mock data for swap suggestions
@@ -96,7 +95,7 @@ const FoodSuggestions: React.FC = () => {
       <Card className="card-hover">
         <CardHeader className="pb-2">
           <CardTitle className="flex items-center gap-2">
-            <SwapHorizontal className="h-5 w-5 text-nutri-purple" />
+            <ArrowRightLeft className="h-5 w-5 text-nutri-purple" />
             <span>Smart Food Swaps</span>
           </CardTitle>
         </CardHeader>
@@ -112,7 +111,7 @@ const FoodSuggestions: React.FC = () => {
                   <div className="px-3 py-1 bg-white rounded-full text-sm border">
                     {swap.original}
                   </div>
-                  <SwapHorizontal className="h-4 w-4 text-gray-400" />
+                  <ArrowRightLeft className="h-4 w-4 text-gray-400" />
                   <div className="px-3 py-1 bg-nutri-purple/10 rounded-full text-sm border-2 border-nutri-purple/20 text-nutri-purple">
                     {swap.suggestion}
                   </div>

@@ -8,7 +8,7 @@ import {
   User, 
   Menu, 
   X,
-  Scanner,
+  ScanLine,
   Apple,
   Settings
 } from 'lucide-react';
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
             <Search className="h-5 w-5" />
           </Button>
           <Button variant="outline" size="icon" className="relative">
-            <Scanner className="h-5 w-5" />
+            <ScanLine className="h-5 w-5" />
           </Button>
           <Button className="bg-nutri-purple hover:bg-nutri-purple/90">
             Get Premium
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
                 <Search className="h-5 w-5" />
               </Button>
               <Button variant="outline" size="icon">
-                <Scanner className="h-5 w-5" />
+                <ScanLine className="h-5 w-5" />
               </Button>
               <Button className="bg-nutri-purple hover:bg-nutri-purple/90">
                 Get Premium

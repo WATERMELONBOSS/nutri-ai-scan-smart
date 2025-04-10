@@ -3,14 +3,14 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Scan, AlertTriangle, Check } from 'lucide-react';
+import { ScanLine, AlertTriangle, Check } from 'lucide-react';
 
 const NutrientAnalyzer: React.FC = () => {
   return (
     <Card className="w-full card-hover">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Scan className="h-5 w-5 text-nutri-purple" />
+          <ScanLine className="h-5 w-5 text-nutri-purple" />
           <span>Nutrition Label Scanner</span>
         </CardTitle>
       </CardHeader>
