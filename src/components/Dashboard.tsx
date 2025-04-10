@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -14,7 +13,7 @@ import {
   ScanLine,
   Baby,
   Microscope,
-  Flask,
+  Beaker,
   Stethoscope,
   Gift
 } from 'lucide-react';
@@ -124,7 +123,7 @@ const Dashboard: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-start gap-4">
                 <div className="h-12 w-12 bg-pink-500/20 flex items-center justify-center rounded-full">
-                  <Flask className="h-6 w-6 text-pink-500" />
+                  <Beaker className="h-6 w-6 text-pink-500" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold mb-1">🧴 Cosmetic & Personal Care Scanner</h3>
