@@ -3,6 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChefHat, ArrowRightLeft } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
 
 const FoodSuggestions: React.FC = () => {
   // Mock data for swap suggestions
@@ -23,6 +24,30 @@ const FoodSuggestions: React.FC = () => {
       benefit: "Natural sugars, added electrolytes"
     }
   ];
+
+  // Handle recipe view
+  const handleViewRecipe = (recipeName: string) => {
+    toast({
+      title: "Recipe Selected",
+      description: `You selected the ${recipeName} recipe`,
+    });
+  };
+
+  // Handle enter ingredients
+  const handleEnterIngredients = () => {
+    toast({
+      title: "Enter Ingredients",
+      description: "Ingredient input feature coming soon",
+    });
+  };
+
+  // Handle show more swaps
+  const handleShowMoreSwaps = () => {
+    toast({
+      title: "More Food Swaps",
+      description: "Additional food swap suggestions coming soon",
+    });
+  };
 
   return (
     <div className="space-y-6">
@@ -59,7 +84,12 @@ const FoodSuggestions: React.FC = () => {
                   <h5 className="font-medium text-sm">Paneer Tikka</h5>
                   <p className="text-xs text-gray-500">20 min • 320 kcal</p>
                 </div>
-                <Button variant="ghost" size="sm" className="text-nutri-green">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-nutri-green"
+                  onClick={() => handleViewRecipe("Paneer Tikka")}
+                >
                   View
                 </Button>
               </div>
@@ -69,7 +99,12 @@ const FoodSuggestions: React.FC = () => {
                   <h5 className="font-medium text-sm">Veg Pulao</h5>
                   <p className="text-xs text-gray-500">30 min • 410 kcal</p>
                 </div>
-                <Button variant="ghost" size="sm" className="text-nutri-green">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-nutri-green"
+                  onClick={() => handleViewRecipe("Veg Pulao")}
+                >
                   View
                 </Button>
               </div>
@@ -79,14 +114,22 @@ const FoodSuggestions: React.FC = () => {
                   <h5 className="font-medium text-sm">Raita Bowl</h5>
                   <p className="text-xs text-gray-500">10 min • 140 kcal</p>
                 </div>
-                <Button variant="ghost" size="sm" className="text-nutri-green">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-nutri-green"
+                  onClick={() => handleViewRecipe("Raita Bowl")}
+                >
                   View
                 </Button>
               </div>
             </div>
           </div>
           
-          <Button className="w-full mt-4 bg-nutri-green hover:bg-nutri-green/90">
+          <Button 
+            className="w-full mt-4 bg-nutri-green hover:bg-nutri-green/90"
+            onClick={handleEnterIngredients}
+          >
             Enter Ingredients
           </Button>
         </CardContent>
@@ -124,7 +167,11 @@ const FoodSuggestions: React.FC = () => {
             ))}
           </div>
           
-          <Button variant="outline" className="w-full mt-4">
+          <Button 
+            variant="outline" 
+            className="w-full mt-4"
+            onClick={handleShowMoreSwaps}
+          >
             Show More Swaps
           </Button>
         </CardContent>
