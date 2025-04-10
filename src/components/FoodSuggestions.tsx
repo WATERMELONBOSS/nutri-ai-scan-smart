@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,7 @@ const FoodSuggestions: React.FC = () => {
       <Card className="card-hover">
         <CardHeader className="pb-2">
           <CardTitle className="flex items-center gap-2">
-            <RefrigeratorIcon className="h-5 w-5 text-nutri-green" />
+            <ChefHat className="h-5 w-5 text-nutri-green" />
             <span>What Can I Cook?</span>
           </CardTitle>
         </CardHeader>
